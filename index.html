@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-item {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Menu</h1>
+    <div id="menu">
+        <div class="menu-item">
+            <span>Pizza - Rp.10000</span>
+            <button onclick="orderItem('Pizza', 10)">Order</button>
+        </div>
+        <div class="menu-item">
+            <span>Burger - Rp.8000</span>
+            <button onclick="orderItem('Burger', 8)">Order</button>
+        </div>
+        <div class="menu-item">
+            <span>Pasta - Rp.12000</span>
+            <button onclick="orderItem('Pasta', 12)">Order</button>
+        </div>
+    </div>
+
+    <h2>Your Order</h2>
+    <div id="order-summary"></div>
+    <div id="total-price"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
