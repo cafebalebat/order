@@ -90,3 +90,11 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.footer {
+    height: 10vh;
+    padding: 20px;
+    background-color: #fd3f00;
+    color: white;
+    text-align: center;
+}
