@@ -62,7 +62,7 @@ menu .cart {
 
 .menu-item p {
     position: absolute;
-    left: 3rem;
+    left: 40px;
     margin-top: 20px;
 
 }
@@ -80,6 +80,10 @@ menu .cart {
 
 .menu-item button:hover {
     background-color: #218838;
+}
+
+.cart {
+    margin-top: 2rem;
 }
 
 .cart-items {
@@ -102,10 +106,6 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.cart {
-    margin-top: 2rem;
 }
 
 button:hover {
