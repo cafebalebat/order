@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan</title>
     <link rel="stylesheet" href="style.css">
-    <title>Order Menu</title>
 </head>
+
 <body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+    </header>
 
-    <h1>Menu</h1>
-    <div id="menu">
-        <div class="menu-item">
-            <span>Pizza - Rp.10000</span>
-            <button onclick="orderItem('Pizza', 10)">Order</button>
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-item" data-name="Yamin Katsu" data-price="10000">
+            <h3>Yamin Katsu</h3>
+            <p>Rp. 10,000</p>
+            <button onclick="addToCart('Yamin Katsu', 10)">Tambah ke Keranjang</button>
         </div>
-        <div class="menu-item">
-            <span>Burger - Rp.8000</span>
-            <button onclick="orderItem('Burger', 8)">Order</button>
+        <div class="menu-item" data-name="Ramen Katsu" data-price="18000">
+            <h3>Ramen Katsu</h3>
+            <p>Rp. 15,000</p>
+            <button onclick="addToCart('Ramen Katsu', 15)">Tambah ke Keranjang</button>
         </div>
-        <div class="menu-item">
-            <span>Pasta - Rp.12000</span>
-            <button onclick="orderItem('Pasta', 12)">Order</button>
+        <div class="menu-item" data-name="Ramen Original" data-price="25000">
+            <h3>Ramen Original</h3>
+            <p>Rp. 10,000</p>
+            <button onclick="addToCart('Ramen Original', 10)">Tambah ke Keranjang</button>
         </div>
-    </div>
+    </section>
 
-    <h2>Your Order</h2>
-    <div id="order-summary"></div>
-    <div id="total-price"></div>
+    <section id="cart">
+        <h2>Keranjang</h2>
+        <ul id="cart-items">
+            <!-- Items in cart will be added here -->
+        </ul>
+        <p id="total-price">Total Harga: Rp 0</p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>

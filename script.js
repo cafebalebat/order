@@ -1,23 +1,49 @@
-let order = [];
-let total = 0;
+let cart = [];
 
-function orderItem(itemName, itemPrice) {
-    order.push({ name: itemName, price: itemPrice });
-    total += itemPrice;
-    updateOrderSummary();
+function addToCart(name, price) {
+    // Cek jika item sudah ada di keranjang
+    const itemIndex = cart.findIndex(item => item.name === name);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity += 1;
+    } else {
+        cart.push({ name, price, quantity: 1 });
+    }
+    updateCart();
 }
 
-function updateOrderSummary() {
-    const orderSummary = document.getElementById('order-summary');
-    const totalPrice = document.getElementById('total-price');
+function updateCart() {
+    const cartItemsContainer = document.getElementById("cart-items");
+    const totalPriceElement = document.getElementById("total-price");
 
-    orderSummary.innerHTML = ''; // Clear the current summary
+    // Bersihkan tampilan keranjang sebelum menambah item baru
+    cartItemsContainer.innerHTML = "";
 
-    order.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.textContent = `${item.name} - Rp${(item.price * 1000).toLocaleString('id-ID')}`;
-        orderSummary.appendChild(itemDiv);
+    let total = 0;
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const cartItem = document.createElement("li");
+        cartItem.innerText = `${item.name} - Rp ${(item.price * 1000)} x ${item.quantity} = Rp ${(itemTotal * 1000)}`;
+        cartItemsContainer.appendChild(cartItem);
     });
 
-    totalPrice.textContent = `Total: Rp${(total * 1000).toLocaleString('id-ID')}`;
+    totalPriceElement.innerText = `Total Harga: Rp ${(total * 1000)}`;
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert("Keranjang Anda kosong. Tambahkan item sebelum checkout.");
+        return;
+    }
+
+    let orderSummary = "Ringkasan Pesanan:\n";
+    cart.forEach(item => {
+        orderSummary += `${item.name} x ${item.quantity} - Rp ${item.price * item.quantity}\n`;
+    });
+
+    orderSummary += `\nTotal: Rp ${cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)}`;
+    alert(orderSummary);
+    cart = [];
+    updateCart();
 }
