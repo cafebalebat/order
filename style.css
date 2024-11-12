@@ -13,6 +13,7 @@ body {
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -32,28 +33,44 @@ h1 {
     color: #333;
 }
 
-menu, .cart {
+.menu-list {
+    display: flex;
+    left: 0;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+menu .cart {
     margin: 100px 0px;
-    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-menu-item {
+.menu-list .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 20px;
     border-bottom: 1px solid #eee;
 }
 
-menu-item h3, menu-item p {
-    margin: 0;
+.menu-item h3 {
+    display: flex;
+    margin-bottom: 20px;
 }
 
-menu-item button {
+.menu-item p {
+    position: fixed;
+    left: auto;
+    margin-top: 20px;
+
+}
+
+.menu-item button {
     padding: 5px 10px;
+    margin-left: auto;
+    justify-content: flex-end;
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -61,19 +78,19 @@ menu-item button {
     cursor: pointer;
 }
 
-menu-item button:hover {
+.menu-item button:hover {
     background-color: #218838;
 }
 
-cart-items {
+.cart-items {
     list-style: none;
 }
 
-cart-items li {
+.cart-items li {
     margin: 10px 0;
 }
 
-total-price {
+.total-price {
     font-weight: bold;
     margin-top: 20px;
 }
