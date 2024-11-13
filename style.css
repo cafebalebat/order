@@ -47,30 +47,38 @@ menu .cart {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.menu-list .menu-item {
+.menu-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
 
-.menu-item h3 {
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.menu-info{
     display: flex;
-    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-.menu-item p {
-    position: absolute;
-    left: 40px;
-    margin-top: 20px;
-
+.menu-info h3 {
+    margin: 0;
+    font-size: 1.2em;
 }
 
-.menu-item button {
+.menu-info p {
+    margin: 5px 0;
+}
+
+.menu-info button {
     padding: 5px 10px;
     margin-left: auto;
-    justify-content: flex-end;
     background-color: #28a745;
     color: #fff;
     border: none;
