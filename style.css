@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #FB4D15;
+    background-color: #ffff;
 }
 
 header {
@@ -25,8 +25,10 @@ header {
 }
 
 .logo img {
-    width: 7rem;
+    width: 10rem;
     transition: all 0.3s ease;
+    border-radius: 48%;
+    background-color: black;
 }
 
 h1 {
@@ -42,7 +44,7 @@ h1 {
 
 menu .cart {
     margin: 100px 0px;
-    background-color: #fff;
+    background-color: #ce1c1c;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +53,7 @@ menu .cart {
     display: flex;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f37106;
 }
 
 .menu-item img {
