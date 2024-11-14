@@ -24,6 +24,32 @@ header {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(53, 51, 51);
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s ease;
+    
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+    padding: 10px 10%;
+}
+
 .logo img {
     width: 10rem;
     transition: all 0.3s ease;
