@@ -41,7 +41,11 @@ function updateCart() {
 
 function checkout() {
     if (cart.length === 0) {
-        alert("Keranjang Anda kosong. Tambahkan item sebelum checkout.");
+        Swal.fire({
+            icon: "warning",  //success,warning,info,question
+            title: "Keranjang Anda kosong. Tambahkan item sebelum checkout.",
+            text: cart.length,
+        });
         return;
     }
 
