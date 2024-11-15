@@ -47,3 +47,19 @@ function checkout() {
     cart = [];
     updateCart();
 }
+
+// js untuk burger menu
+
+function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    if (navList.style.display === 'flex') {
+        navList.style.display = 'none';
+    } else {
+        navList.style.display = 'flex';
+        navList.style.flexDirection = 'column'; // Agar menu ditampilkan secara vertikal
+        navList.style.position = 'absolute'; // Agar menu tidak mengganggu layout
+        navList.style.backgroundColor = 'white'; // Tambahkan background jika perlu
+        navList.style.width = '100%'; // Agar menu memenuhi lebar layar
+        navList.style.zIndex = '1000'; // Agar menu di atas konten lainnya
+    }
+}
