@@ -6,6 +6,7 @@ await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2
 let cart = [];
 
 window.addToCart=addToCart;
+window.checkout=checkout;
 
 function addToCart(name, price) {
     // Cek jika item sudah ada di keranjang
