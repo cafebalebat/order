@@ -1,3 +1,8 @@
+import {addCSSInHead} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.6/element.js";
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
+
+await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
+
 let cart = [];
 
 function addToCart(name, price) {
@@ -43,7 +48,12 @@ function checkout() {
     });
 
     orderSummary += `\nTotal: Rp ${cart.reduce((acc, item) => acc + ((item.price * 1000) * item.quantity), 0)}`;
-    alert(orderSummary);
+    //alert(orderSummary);
+    Swal.fire({
+        icon: "succes",  //success,warning,info,question
+        title: "Checkout",
+        text: orderSummary,
+    });
     cart = [];
     updateCart();
 }
