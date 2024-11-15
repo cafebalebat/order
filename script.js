@@ -57,13 +57,21 @@ function checkout() {
     orderSummary += `\nTotal: Rp ${cart.reduce((acc, item) => acc + ((item.price * 1000) * item.quantity), 0)}`;
     //alert(orderSummary);
     Swal.fire({
-        icon: "succes",  //success,warning,info,question
+        icon: "success",  //success,warning,info,question
         title: "Checkout",
         text: orderSummary,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            
+            window.location.href = "https://cafebalebat.shop/payment/"; // Mengalihkan ke halaman payment
+        }
     });
+
     cart = [];
     updateCart();
 }
+
+
 
 // js untuk burger menu
 
