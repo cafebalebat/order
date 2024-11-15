@@ -24,11 +24,17 @@ header {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* navbar style */
 nav ul {
-    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+}
+
+/* Sembunyikan menu pada layar kecil */
+nav ul {
+    display: none; /* Sembunyikan menu secara default */
 }
 
 nav ul li {
@@ -221,5 +227,24 @@ footer {
 
     button {
         font-size: 0.9em;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex; /* Tampilkan menu sebagai flexbox */
+    }
+}
+
+/* Style untuk tombol hamburger */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .hamburger {
+        display: none; /* Sembunyikan tombol hamburger pada layar besar */
     }
 }
