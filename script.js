@@ -5,6 +5,8 @@ await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2
 
 let cart = [];
 
+window.addToCart=addToCart;
+
 function addToCart(name, price) {
     // Cek jika item sudah ada di keranjang
     const itemIndex = cart.findIndex(item => item.name === name);
