@@ -63,7 +63,7 @@ function checkout() {
     }).then((result) => {
         if (result.isConfirmed) {
             
-            window.location.href = "https://cafebalebat.shop/payment/"; // Mengalihkan ke halaman payment
+            window.location.href = "payment.html"; // Mengalihkan ke halaman payment
         }
     });
 

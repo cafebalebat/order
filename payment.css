@@ -37,6 +37,27 @@ h2 {
     font-size: 1.5em;
 }
 
+.payment-method {
+    background-color: #308888; /* Ganti dengan warna latar belakang yang diinginkan */
+    color: #333; /* Ganti dengan warna teks yang diinginkan */
+    padding: 10px; /* Tambahkan padding jika perlu */
+    border-radius: 5px; /* Tambahkan border radius untuk sudut yang lebih halus */
+}
+
+select {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #2e14c0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+option .Transfer, .COD {
+    cursor: pointer;
+}
+
 .whatsapp-button {
     display: inline-block;
     padding: 10px 20px;
